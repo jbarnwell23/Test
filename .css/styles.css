@@ -1,0 +1,305 @@
+html{
+    --bg: #6faeb9;
+    --bg-panel: whitesmoke;
+    --bg-nav: #64cfe7;
+    --bg-bord: #5ebed3;
+    --bg-a: rgb(87, 100, 112);
+    --bg-hov: rgb(111, 215, 233);
+    --color-hov: rgb(217, 235, 235);
+    --card-hov: rgba(76, 79, 87, 0.205);
+    background-color: var(--bg);
+    box-sizing: border-box;
+}
+    
+*, 
+*:before, 
+*:after {
+    box-sizing: inherit;
+}
+html[data-theme='dark']{
+    --bg: rgb(11, 35, 41);
+    --bg-panel: rgb(119, 118, 118);
+    --bg-nav: #027c97;
+    --bg-bord: #20434b;
+    --bg-a: rgb(143, 158, 172);
+    --bg-hov: #005669;
+    --color-hov: rgb(155, 168, 168);
+    --card-hov: rgba(0, 0, 0, 0.432);
+}
+
+ul{
+    list-style: none;
+    display: flex;
+
+}
+
+.cont{
+    margin-left: 30px;
+    justify-content: center;
+}
+
+.nav{
+    text-decoration: none;
+    color: var(--bg-a);
+    text-align: center;
+    border: 5px solid var(--bg-bord);
+    padding: 10px;
+    padding-left: 80px;
+    padding-right: 80px;
+    background-color: var(--bg-nav);
+    transition: all .4s ease-in-out;
+    
+}
+
+
+
+a:hover{
+    background-color: var(--bg-hov);
+    color: var(--color-hov);
+
+}
+
+
+
+.links{
+    justify-content: space-around;
+    line-height: 10px;
+    font-family:'Courier New', Courier, monospace;
+    color: var(--color-text);
+    font-size: 1.7em;
+    margin-right: 70px;
+    transition: all .5s ease-in-out;
+    
+
+
+}
+
+
+.box{
+    display: flex;
+    justify-content: center;
+}
+
+
+.fbox,
+.fbox2{
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 0;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+.card{
+    background-color: var(--bg-panel);
+    width: 325px;
+    height: 400px;
+    justify-content: center;
+    flex-direction: row;
+    padding-bottom: 150px;
+    padding-top: 15px;
+    transition: all .5s ease-in-out;  
+}
+
+.card:hover{
+    box-shadow: 12px 12px 2px 1px var(--card-hov);
+    transform: translateX(-5%);
+}
+
+img{
+    display: flex;
+    justify-content: center;
+    margin-left: 12px;
+}
+
+.logo{
+    display: flex;
+    
+}
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    color: var(--bg-panel);
+    font-family: Impact, fantasy;
+    font-weight: 100;
+    font-variant: small-caps;
+    -webkit-text-stroke: 1px black;
+    font-size: 3em;
+    margin: 0;
+}
+
+.newb{
+    display: flex;
+    justify-content: center;
+    color: var(--color-headings);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 52px;
+	height: 27px;
+	background: gray;
+	border-radius: 100px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background: var(--color-headings);
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 45px;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+
+}
+
+footer{
+    background-color: var(--bg-bord);
+
+}
+
+figcaption{
+    font-family:'Courier New', Courier, monospace;
+    color: var(--color-text);
+    text-align: center;
+    position:relative;
+    top: 5px;
+
+}
+
+
+.f2,
+.f3{
+
+    display: flex;
+    justify-content: space-around;
+    flex: wrap;
+    flex-direction: column;
+}
+
+.foo {
+    text-decoration: none;
+    color: var(--bg-a);
+}
+
+.fboxfoo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.div1,
+.div2{
+    display: flex;
+    flex-wrap: row;
+    justify-content: center;
+}
+
+.mobnav{
+    display: none;
+}
+
+.socials{
+    display: flex;
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.socialcont{
+    display: flex;
+    justify-content: center;
+    height: 10px;
+}
+
+h3,
+p{
+    color: var(--color-headings);
+    font-family:'Courier New', Courier, monospace;
+    text-decoration: none;
+
+}
+
+/* Mobile Vertical */
+@media screen and (max-width: 736px) {
+    
+
+    * {
+        transition: none !important;
+        transform: none !important;
+        box-shadow: none !important;
+    }
+
+    .nav{
+        visibility: hidden;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .mobnav{
+        background-color: var(--bg-nav);
+        padding: 10px;
+        display:flex
+    }
+
+    .card {
+    background-color: var(--bg-panel);
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 110px;
+    padding-top: 15px;
+    margin-top: 10px;
+    }
+
+   .fboxfoo {
+        flex-wrap: wrap-reverse;
+
+    }
+
+    .div1,
+    .div2{
+        flex-direction: column;
+    }
+  
+
+}
+    
